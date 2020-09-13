@@ -1,65 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-
-<!DOCTYPE html>
-<html>
-
-<head lang="en">
-<meta charset="UTF-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-<title>Qi Song</title>
-
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
-<link rel="stylesheet" href="css/app.css">
-
-<link rel="stylesheet" href="css/bootstrap.min.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
-<script src="js/app.js"></script>
+  <title>Qi Song's Homepage</title>
+  
+  <meta name="author" content="Qi Song">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
 <body>
-<div class="container" id="main">
-<div class="row">
-<h2 class="col-md-12 text-center">
-Qi Song <br>
-<!-- <small>
-</small> -->
-</h2>
-</div>
-<div class="row">
-<div class="col-md-12 text-center">
-<ul class="list-inline">
-<li>
-I am a M.Phil student at The Chinese University of Hong Kong, Shenzhen, <br>
-where I work on compute vision and computational photography, advised by Prof. Rui Huang.</br>
-</div>
-</div>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Qi Song</name>
+              </p>
+              <p>I am a PhD candidate at <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a>, where I work on compute vision and computational photography, advised by <a href="https://myweb.cuhk.edu.cn/ruihuang"> Prof. Rui Huang</a>.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:songqi@cuhk.edu.cn">Email</a> &nbsp/&nbsp
+                <a href="https://github.com/songqi-github">Github</a> &nbsp/&nbsp
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/songq.png"><img style="width:80%;max-width:80%;" alt="profile photo" src="images/songqi.png" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Research</heading>
+              <p>
+                My research interest mainly focuses on semantic segmentation.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-<div class="row">
-<div class="col-md-8 col-md-offset-2">
-<h3>
-Research
-</h3>
-<image src="img/teaser.png" class="img-responsive" alt="overview"><br>
-<p class="text-justify">
-<a href="https://github.com/songqi-github/songqi-github.github.io/blob/master/research/AttaNet/index.html">
-Attention-Augmented Network (AttaNet)</p>
-</a>
-</div>
-</div>
 
-</p>
-</div>
-</div>
-</div>
+          <tr onmouseout="dpl_stop()" onmouseover="dpl_start()" bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='dpl_image'>
+                  <img src='images/dpl_our.png' width="160"></div>
+                <img src='images/dpl_cx.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function dpl_start() {
+                  document.getElementById('dpl_image').style.opacity = "1";
+                }
+
+                function dpl_stop() {
+                  document.getElementById('dpl_image').style.opacity = "0";
+                }
+                dpl_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="research/AttaNet/index.html">
+                <papertitle>AttaNet: Attention-Augmented Network for Fast and Accurate Scene Parsing</papertitle>
+              </a>
+              <br>
+              <strong>Qi Song</strong>,
+              <a href="https://mkfmiku.github.io/">Kangfu Mei</a>,
+              <a href="https://myweb.cuhk.edu.cn/ruihuang">Rui Huang</a>
+              <br>
+              <em>AAAI</em>, 2021
+              <p></p>
+              <p>Enhance segmentation performance using attention strategy.</p>
+            </td>
+          </tr>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Prizes</heading>
+              <p style="color: crimson">A</p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </table>
 </body>
+
 </html>
