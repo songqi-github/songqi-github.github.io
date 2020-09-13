@@ -92,10 +92,10 @@ Abstract
 </h3>
 <image src="img/teaser.png" class="img-responsive" alt="overview"><br>
 <p class="text-justify">
-Two factors have proven to be very important to the performance of semantic segmentation models: global context and multi-level semantics. However, generating features that capture both factors always leads to high computational complexity, which is problematic in real-time scenarios. In this
-paper, we propose a new model, called Attention-Augmented Network (AttaNet), to capture both global context and multilevel semantics while keeping the efficiency high. AttaNet
+Two factors have proven to be very important to the performance of semantic segmentation models: global context and multi-level semantics. However, generating features that capture both factors always leads to high computational complexity, which is problematic in real-time scenarios. In this
+paper, we propose a new model, called Attention-Augmented Network (AttaNet), to capture both global context and multi-level semantics while keeping the efficiency high. AttaNet
 consists of two primary modules: Strip Attention Module (SAM) and Attention Fusion Module (AFM). Viewing that there is a significantly larger amount of vertical strip areas than horizontal ones in the natural images, SAM utilizes a striping operation to reduce the complexity of encoding
-global context in the vertical direction drastically while keeping most of contextual information, compared to the nonlocal approaches. Moreover, AFM follows a cross-level aggregation strategy to limit the computation, and adopts an attention strategy to weight the importance of different levels
+global context in the vertical direction drastically while keeping most of contextual information, compared to the non-local approaches. Moreover, AFM follows a cross-level aggregation strategy to limit the computation, and adopts an attention strategy to weight the importance of different levels
 of features at each pixel when fusing them, obtaining an efficient multi-level representation. We have conducted extensive experiments on two semantic segmentation benchmarks, and our network achieves different levels of speed/accuracy tradeoff on Cityscapes, e.g., 71 FPS/79.9% mIoU, 130 FPS/78.5%
 mIoU, and 180 FPS/70.1% mIoU, and leading performance on ADE20K as well.</p>
 </div>
@@ -108,20 +108,15 @@ mIoU, and 180 FPS/70.1% mIoU, and leading performance on ADE20K as well.</p>
 <h3>
 Training a network without and with SAM
 </h3>
-<video id="v0" width="100%" autoplay loop muted controls>
-<source src="img/lion_none_gauss_v1.mp4" type="video/mp4" />
-</video>
 <p class="text-justify">
-In this paper, we train MLP networks to learn <em>low dimensional</em> functions, such as the function defined by an image that maps each (x, y) pixel coordinate to an output (r, g, b) color. A standard MLP is not able to learn such functions (blue border image). Simply applying a Fourier feature mapping to the input (x, y) points before passing them to the network allows for rapid convergence (orange border image).
 </p>
 <p class="text-justify">
-This Fourier feature mapping is very simple. For an input point <b>v</b> (for the example above, (x, y) pixel coordinates) and a random Gaussian matrix <b>B</b>, where each entry is drawn independently from a normal distribution N(0, σ<sup>2</sup>), we use
 </p>
 <p style="text-align:center;">
-<image src="img/gamma.png" height="30px" class="center">
+<image src="img/wSAM.png" height="30px" class="center">
 </p>
 <p class="text-justify">
-to map input coordinates into a higher dimensional feature space before passing them through the network.
+SAM generates more consistent segmentation inside large objects or along banded classes.
 </p>
 </div>
 </div>
@@ -132,14 +127,13 @@ to map input coordinates into a higher dimensional feature space before passing 
 <h3>
 Training a network without and with AFM
 </h3>
-<video id="v0" width="100%" autoplay loop muted controls>
-<source src="img/test_sweep_1e-4_5000_more_low.mp4" type="video/mp4" />
-</video>
 <p class="text-justify">
-Recent theoretical work describes the behavior of deep networks in terms of the <em>neural tangent kernel</em> (NTK), showing that the network's predictions over the course of training closely track the outputs of kernel regression problem being optimized by gradient descent. In our paper, we show that using a Fourier feature mapping transforms the NTK into a stationary kernel in our low-dimensional problem domains. In this context, the bandwidth of the NTK limits the spectrum of the recovered function.
+</p>
+<p style="text-align:center;">
+<image src="img/wAFM.png" height="30px" class="center">
 </p>
 <p class="text-justify">
-In the video above, we show how scaling the Fourier feature frequencies provides direct control over the width of the NTK. This allows us to traverse a regime from underfitting (low scale, recovered function too low frequency) to overfitting (high scale, recovered function too high frequency), with the best generalization performance in the middle. Note that each image shown is the output of a different trained MLP network. The networks are supervised on a subsampled 256 x 256 image and tested at the full 512 x 512 resolution.
+AFM can exploit more discriminative context for each class.
 </p>
 </div>
 </div>
