@@ -41,7 +41,7 @@ arXiv 2020
 <div class="col-md-12 text-center">
 <ul class="list-inline">
 <li>
-<a href="https://github.com/songqi-github">
+<a href="https://songqi-github.github.io/">
 Qi Song
 </a>
 </br>CUHK(SZ)
@@ -115,7 +115,9 @@ Training a network without and with SAM
 <p class="text-justify">
 </p>
 <p class="text-justify">
-SAM generates more consistent segmentation inside large objects or along banded classes.
+The benefits of our SAM are three-fold. First, since the striped feature map is the combination of all pixels along the same spatial dimension, this gives strong supervision in capturing anisotropy or banded context. 
+  Second, we first ensure that the relationships between each pixel and all columns are considered, and then estimate the attention map along the horizontal axis, thus our network can generate dense contextual dependencies. 
+  Moreover, this module adds only a few parameters to the backbone network, and therefore takes up very little GPU memory.
 </p>
 </div>
 </div>
@@ -130,7 +132,9 @@ Training a network without and with AFM
 <p class="text-justify">
 </p>
 <p class="text-justify">
-AFM can exploit more discriminative context for each class.
+Since low-level features contain excessive spatial details while high-level features are rich in semantics, simply aggregating multi-level information would weaken the effectiveness of information propagation. 
+  To address this issue, we introduce Attention Fusion Module which enables each pixel to choose individual contextual information from multi-level features in the aggregation phase. 
+  AFM can exploit more discriminative context for each class.
 </p>
 </div>
 </div>
