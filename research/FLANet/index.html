@@ -138,7 +138,7 @@ Model Architecture
 <p class="text-justify">
 </p>
 <p class="text-justify">
-Motivated by this, we propose a novel non-local block namely Fully Attentional block (FLA) to efficiently retain attentions in all dimensions. And the workflow is shown in Fig.\ref{fig1} (c). The basic idea is to utilize the global context information to receive spatial responses when computing the channel attention map, which enables full attentions in a single attention unit with high computational efficiency. 
+Motivated by this, we propose a novel non-local block namely Fully Attentional block (FLA) to efficiently retain attentions in all dimensions. And the workflow is shown in the figure above. The basic idea is to utilize the global context information to receive spatial responses when computing the channel attention map, which enables full attentions in a single attention unit with high computational efficiency. 
   Specifically, we first enable each spatial position to harvest feature responses from the global contexts with the same horizontal and vertical coordinates. Second, we use the self-attention mechanism to capture the fully attentional similarities between any two channel maps and the associated spatial positions. 
   Finally, the generated fully attentional similarities are used to re-weight each channel map by integrating features among all channel maps and associated global clues. 
 </p>
